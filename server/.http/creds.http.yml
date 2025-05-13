@@ -1,0 +1,21 @@
+---
+global: {}
+---
+
+label: New Credential
+query:
+  method: POST
+  url: '{{.base_url}}/cred'
+  headers:
+    content-type: application/json
+body:
+  # username: "sample-p1_5"
+  # password: "sample-p1_5"
+  username: "sample-p3_2"
+  password: "sample-p3_2"
+  hosts:
+    - google.com
+  tags:
+    - logins
+  namespace: fake_logins
+---

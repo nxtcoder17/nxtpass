@@ -1,0 +1,27 @@
+env:
+  DEBUG: true
+
+tasks:
+  peer1:
+    env:
+      NXTPASS_PORT: 30001
+      NXTPASS_INSTANCE: peer1
+      NXTPASS_DB: .secrets/peer1.db
+    cmd:
+      - go run ./cmd
+
+  peer2:
+    env:
+      NXTPASS_PORT: 30002
+      NXTPASS_INSTANCE: peer2
+      NXTPASS_DB: .secrets/peer2.db
+    cmd:
+      - go run ./cmd
+
+  peer3:
+    env:
+      NXTPASS_PORT: 30003
+      NXTPASS_INSTANCE: peer3
+      NXTPASS_DB: .secrets/peer3.db
+    cmd:
+      - go run ./cmd

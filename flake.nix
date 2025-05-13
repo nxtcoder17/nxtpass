@@ -35,10 +35,15 @@
 
             # your packages here
             go
+            sqlc
+            sqlite
+            litecli # better sqlite cli
+
             deno
           ];
 
           shellHook = ''
+            export HTTP_CLI_ENV="$PWD/server/.secrets/http-cli-env.yml"
           '';
         };
       }
